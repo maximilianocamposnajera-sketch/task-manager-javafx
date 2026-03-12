@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.DatePicker?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.MainController">
+
+    <top>
+        <HBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Bienvenido,"/>
+            <Label fx:id="lblUsuario" style="-fx-font-weight: bold;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Cerrar sesión" onAction="#cerrarSesion"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <HBox spacing="10">
+                <Label text="Descripción:"/>
+                <TextField fx:id="txtDescripcion" prefWidth="200"/>
+                <Label text="Fecha:"/>
+                <DatePicker fx:id="datePickerFecha"/>
+            </HBox>
+
+            <TableView fx:id="tablaTareas" prefHeight="300">
+                <columns>
+                    <TableColumn fx:id="colTarea" text="Tarea" prefWidth="200"/>
+                    <TableColumn fx:id="colCompletada" text="Completada" prefWidth="100"/>
+                    <TableColumn fx:id="colFecha" text="Fecha" prefWidth="120"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button text="Agregar" onAction="#agregarTarea"/>
+            <Button text="Editar" onAction="#editarTarea"/>
+            <Button text="Eliminar" onAction="#eliminarTarea"/>
+            <Button text="Marcar como completada" onAction="#marcarCompletada"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

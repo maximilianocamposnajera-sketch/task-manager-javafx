@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.RegisterController">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Registro de Usuario" style="-fx-font-size: 18;" />
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Usuario:" minWidth="80"/>
+        <TextField fx:id="txtUsuario" prefWidth="200"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Contraseña:" minWidth="80"/>
+        <PasswordField fx:id="txtPassword" prefWidth="200"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Registrar" onAction="#registrarUsuario"/>
+        <Button text="Cancelar" onAction="#volverLogin"/>
+    </HBox>
+
+    <Button fx:id="btnVolver" text="Volver al inicio" onAction="#volverAlLogin"/>
+</VBox>
