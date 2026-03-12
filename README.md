@@ -51,6 +51,7 @@ mvn javafx:run
 
 Esto iniciará la aplicación JavaFX.
 
-## Autor
+ ## Autores
 
-Maximiliano Campos
+- Maximiliano Campos  
+- Aníbal Ulises Rojas Martínez
